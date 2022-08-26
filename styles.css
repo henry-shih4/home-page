@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url(images/andres-molina-5boA6Onp77c-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#toggle-btn{
+    padding:10px;
+    cursor: pointer;
+    position: absolute;
+        top: 0;
+        left: 0;
+        z-index:2;
+}
+
+#toggle-btn div{
+    width:22px;
+    height:4px;
+    background-color: black;
+    margin:3px;
+}
+
+
+.toggle-btn-active{
+    transform: rotate(90deg);
+    transition-duration: 2s;
+}
+
+.toggle-btn-default{
+        transform: rotate(0deg);
+            transition-duration: 2s;
+}
+
+#sidebar{
+position:absolute;
+top:0;
+left:0;
+background-color:azure;
+height:100vh;
+min-width:200px;
+z-index:1;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
+.hidden{
+transform: translateX(-200px);
+transition-duration: 1.5s;
+}
+
+.active{
+transform: translateX(0px);
+transition-duration: 1.5s;
+}
+
+#nav{
+    position:absolute;
+    top:10%;
+    width:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#nav-title{
+    font-size:22px;
+    text-decoration: underline;
+    margin-bottom:16px;
+}
+
+#nav ul{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+#nav li{
+    list-style: none;
+    padding:14px;
+    width:200px;
+    cursor: pointer;
+    text-align: center;
+}
+#nav li:hover{
+    background-color:rgb(211, 248, 248);
+    font-size:18px;
+}
+#nav li a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+.main{
+    max-height: 100vh;
+    width:100%;
+    color:white;
+    text-align: center;
+    font-size:4rem;
+    opacity:0.9;
+}
+
+.clock{
+    margin-bottom:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    margin-left:10px;
+}
+
+#greeting{
+    margin-bottom:30px;
+}
+
+.today{
+    font-size:32px;
+}
+
+#list{
+    font-size:20px;
+}
+
+#list ul{
+    margin-top:1em;
+    font-size:16px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:azure;
+    width:180px;
+    height:40px;
+    color:black;
+    list-style: none;
+    padding:6px;
+    animation: append-animate 0.65s linear;
+    border-radius:8px;
+    margin:3px;
+    padding-top:4px;
+    padding-bottom:4px;
+}
+
+#list li span{
+    padding: 1em;
+}
+
+input{
+    margin-right:10px;
+}
+button{
+    padding:2px;
+}
+
+
+
+
+@keyframes append-animate {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-height:500px){
+    #greeting, .clock{
+        font-size:2rem;
+    }
+    .today{
+        font-size:1rem;
+    }
+
+        #list li{
+            font-size:12px;
+        }
+}
