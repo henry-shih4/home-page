@@ -86,7 +86,7 @@ function addItem() {
   listItem.appendChild(span);
   listItem.appendChild(button2);
   span.textContent = inputValue;
-  button2.textContent = "Delete";
+  button2.textContent = "x";
   list.appendChild(listItem);
 
   button2.addEventListener("click", function () {
