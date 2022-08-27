@@ -5,10 +5,10 @@
 }
 
 body{
+    font-family:'Roboto', sans-serif;
     background-image: url(images/andres-molina-5boA6Onp77c-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family:sans-serif;
 }
 
 .container {
@@ -31,7 +31,7 @@ body{
 #toggle-btn div{
     width:22px;
     height:4px;
-    background-color: black;
+    background-color: white;
     margin:3px;
 }
 
@@ -50,7 +50,7 @@ body{
 position:absolute;
 top:0;
 left:0;
-background-color:azure;
+background-color:rgb(197, 197, 197);
 height:100vh;
 min-width:200px;
 z-index:1;
@@ -150,20 +150,21 @@ transition-duration: 1.5s;
 }
 
 #list li{
+    font-size: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:azure;
     width:180px;
-    height:40px;
+    height:30px;
     color:black;
     list-style: none;
-    padding:6px;
+    padding:10px;
     animation: append-animate 0.65s linear;
-    border-radius:8px;
+    border-radius:4px;
     margin:3px;
-    padding-top:4px;
-    padding-bottom:4px;
+    padding-top:6px;
+    padding-bottom:6px;
 }
 
 #list li span{
@@ -173,8 +174,9 @@ transition-duration: 1.5s;
 input{
     margin-right:10px;
 }
-button{
+li button{
     padding:2px;
+    font-size: 12px;
 }
 
 
